@@ -2,8 +2,8 @@ resources:
   - name: MyGitHub
     type: GitRepo
     configuration:
-      path: jfrogtw/jfrog-pipelines-extensions-sample    # <-- Change to your repository path
-      gitProvider: tw_github                                    # <-- Change to your GitHub integration
+      path: declarativesystems/jfrog-pipelines-extensions-sample    # <-- Change to your repository path
+      gitProvider: github                                    # <-- Change to your GitHub integration
       
   - name: MyTest
     type: tutorials/test
