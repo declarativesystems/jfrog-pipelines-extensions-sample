@@ -1,5 +1,5 @@
 test_output() {
-  echo "resource name: $1"
+  echo "output zone: $1"
   printenv
 }
 
