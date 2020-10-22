@@ -5,12 +5,12 @@ resources:
       path: declarativesystems/jfrog-pipelines-extensions-sample    # <-- Change to your repository path
       gitProvider: github                                    # <-- Change to your GitHub integration
       
-  - name: MyTest
-    type: tutorials/test
-    configuration:
-      alpha: "JFrog"
-      number: 42
-      flag: true
+#  - name: MyTest
+#    type: tutorials/test
+#    configuration:
+#      alpha: "JFrog"
+#      number: 42
+#      flag: true
 
 pipelines: 
   - name: MyHealthCheck
@@ -20,7 +20,7 @@ pipelines:
           my_env_var: "hello" 
     steps:
       - name: Health_Check_Step
-        type: tutorials/HealthCheck
+        type: nodejs/HealthCheck
         configuration:
           healthCheckUrl: "https://jfrog.com"
           notifyOnSuccess: false
@@ -29,5 +29,4 @@ pipelines:
            - "This is a string"
            - "This is another string"
           inputResources:
-           - name: MyTest
            - name: MyGitHub
